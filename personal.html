@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde Yucatán - Executive Team</title>
+    <style>
+        :root {
+            --color1: #7ebeb2;
+            --color2: #d1f3db;
+            --color3: #da9c3c;
+            --color4: #bc1953;
+            --color5: #7d144c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            line-height: 1.5;
+            color: #333;
+            background-color: var(--color2);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            background-color: var(--color1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--color5);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: "▼";
+            font-size: 8px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+        
+        .language-select:after {
+            content: "▼";
+            font-size: 8px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+        
+        .nav-links a:not(:has(::after)) {
+            content: "";
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .language-select {
+            border: none;
+            background: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .login-btn {
+            padding: 8px 15px;
+            text-decoration: none;
+            color: var(--color5);
+            font-weight: bold;
+        }
+
+        .login-btn:hover {
+            background-color: rgba(125, 20, 76, 0.1);
+            border-radius: 4px;
+        }
+        
+        .demo-btn {
+            padding: 10px 20px;
+            background-color: var(--color3);
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .demo-btn:hover {
+            background-color: #c78d35;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--color5);
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            margin-bottom: 50px;
+            color: #555;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 3px solid var(--color1);
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--color4);
+        }
+        
+        .member-title {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .back-to-home {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-to-home a {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--color3);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-home a:hover {
+            background-color: #c78d35;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .navbar {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="logo">Verde Yucatán</a>
+        <div class="nav-links">
+            <a href="#">¿Quienes somos?</a>
+            <a href="#">Servicios</a>
+            <a href="#">Personal</a>
+            <a href="#">Contacto</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>Executive Team</h1>
+        <p class="subtitle">Conoce al equipo de expertos al frente de Verde Yucatán</p>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="profile-img">
+                    <img src="/api/placeholder/120/120" alt="Luis Reyes">
+                </div>
+                <h3 class="member-name">Luis Reyes</h3>
+                <p class="member-title">Chief Financial Officer</p>
+            </div>
+            
+            <div class="team-member">
+                <div class="profile-img">
+                    <img src="/api/placeholder/120/120" alt="Yesenia Martin Arceo">
+                </div>
+                <h3 class="member-name">Yesenia Martin Arceo</h3>
+                <p class="member-title">Chief Product & Technology Officer</p>
+            </div>
+            
+            <div class="team-member">
+                <div class="profile-img">
+                    <img src="/api/placeholder/120/120" alt="Selena Ciau">
+                </div>
+                <h3 class="member-name">Selena Ciau</h3>
+                <p class="member-title">Chief Marketing Officer</p>
+            </div>
+            
+            <div class="team-member">
+                <div class="profile-img">
+                    <img src="/api/placeholder/120/120" alt="Diego Canche">
+                </div>
+                <h3 class="member-name">Diego Canche</h3>
+                <p class="member-title">Chief People Officer</p>
+            </div>
+        </div>
+
+        <div class="back-to-home">
+            <a href="index.html">Volver al Inicio</a>
+        </div>
+    </div>
+</body>
+</html>
