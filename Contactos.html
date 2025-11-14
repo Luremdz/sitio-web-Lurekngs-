@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Verde Yucatán</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --color1: #7ebeb2;
+      --color2: #d1f3db;
+      --color3: #da9c3c;
+      --color4: #bc1953;
+      --color5: #7d144c;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--color2);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: var(--color1);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: var(--color2);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid var(--color1);
+    }
+    button {
+      background-color: var(--color3);
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact-info, .social-media, .map {
+      margin-top: 20px;
+    }
+    .social-media a {
+      margin-right: 10px;
+      font-size: 1.5em;
+      color: var(--color4);
+      text-decoration: none;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+    .return-home {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .return-home a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: var(--color3);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contáctanos - Verde Yucatán</h1>
+  </header>
+  <div class="container">
+    <p>¿Tienes alguna pregunta o sugerencia? ¡Estamos para ayudarte!</p>
+    <form>
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Información de contacto</h3>
+      <p><strong>Dirección:</strong> Carretera Valladolid - Tizimín, Km. 3.5<br>
+        Tablaje Catastral No. 8850<br>
+        Valladolid, Yucatán, México, C.P. 97780</p>
+      <p><strong>Teléfono:</strong> +52 999 123 4567</p>
+      <p><strong>Email:</strong> info@verdeyucatan.com</p>
+    </div>
+
+    <div class="social-media">
+      <h3>Síguenos como verdeyucatan</h3>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+  </div>
+  <div class="return-home">
+    <a href="index.html">Volver al Inicio</a>
+  </div>
+</body>
+</html>
